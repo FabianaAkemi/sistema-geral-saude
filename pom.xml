@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.algaworks</groupId>
+	<groupId>com.tcc</groupId>
 	<artifactId>sistema-geral-saude</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	
@@ -24,8 +24,17 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		
-		<thymeleaf.version>3.0.3.RELEASE</thymeleaf.version>
-		<thymeleaf-layout-dialect.version>2.1.2</thymeleaf-layout-dialect.version>
+		<!-- Thymeleaf -->
+		<thymeleaf.version>3.0.1.RELEASE</thymeleaf.version>
+
+		<!-- Thymeleaf - Layout Dialect -->
+		<thymeleaf-layout-dialect.version>2.0.1</thymeleaf-layout-dialect.version>
+		
+				<!-- Thymeleaf extras data attribute -->
+		<thymeleaf-extras-data-attribute.version>2.0.1</thymeleaf-extras-data-attribute.version>
+
+		<!-- Thymeleaf - Extras Spring Security -->
+		<thymeleaf-extras-springsecurity4.version>3.0.0.RELEASE</thymeleaf-extras-springsecurity4.version>
 
 	</properties>
 
@@ -34,6 +43,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -61,10 +71,15 @@
 		</dependency>
 
 		<dependency>
-			<groupId>nz.net.ultraq.thymeleaf</groupId>
-			<artifactId>thymeleaf-layout-dialect</artifactId>
-			<version>2.0.4</version>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity4</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.github.mxab.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-data-attribute</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
