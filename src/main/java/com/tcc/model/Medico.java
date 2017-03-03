@@ -26,7 +26,11 @@ public class Medico {
     @Enumerated(EnumType.STRING)
     private TipoEspecialista especialista;
 
+    @NotNull
     private Long crm;
+
+    @NotNull
+    private Long telefone;
 
     public Long getId() {
         return id;
@@ -66,6 +70,14 @@ public class Medico {
 
     public void setCrm(Long crm) {
         this.crm = crm;
+    }
+
+    public Long getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(Long telefone) {
+        this.telefone = telefone;
     }
 
     @Override

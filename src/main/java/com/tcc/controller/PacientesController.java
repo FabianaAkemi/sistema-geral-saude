@@ -1,8 +1,8 @@
 package com.tcc.controller;
 
-import com.tcc.model.Medico;
+import com.tcc.model.Paciente;
 import com.tcc.model.TipoEspecialista;
-import com.tcc.repository.MedicosRepository;
+import com.tcc.repository.PacientesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -17,32 +17,28 @@ import javax.validation.Valid;
  * Created by akemi on 27/02/17.
  */
 @Controller
-@RequestMapping("/medicos")
-public class MedicosController {
+@RequestMapping("/pacientes")
+public class PacientesController {
 
     @Autowired
-    private MedicosRepository medicosRepository ;
+    private PacientesRepository pacientesRepository;
 
     @GetMapping("/novo")
-    private ModelAndView novo(Medico medico){
+    private ModelAndView novo(Paciente medico){
 
-        ModelAndView mv = new ModelAndView("saude/cadastro-medico");
-        mv.addObject("especialistas", TipoEspecialista.values());
+        ModelAndView mv = new ModelAndView("saude/cadastro-paciente");
         return mv;
 
     }
 
     @PostMapping("/novo")
-    private ModelAndView novo(@Valid Medico medico, BindingResult result) {
+    private ModelAndView novo(@Valid Paciente paciente, BindingResult result) {
 
         if (result.hasErrors()) {
-            return novo(medico);
+            return novo(paciente);
         }
 
-        medicosRepository.save(medico);
-        return new ModelAndView("redirect:/medicos/novo");
+        pacientesRepository.save(paciente);
+        return new ModelAndView("redirect:/pacientes/novo");
     }
-
-
-
 }
