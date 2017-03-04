@@ -16,10 +16,23 @@
                         </a>
 
                         <ul class="aw-menu__list  aw-menu__list--sublist">
-                            <li class="aw-menu__item  aw-menu__item--link is-active"><a th:href="@{/medicos/novo}">Cadastro Médico</a></li>
-                            <li class="aw-menu__item  aw-menu__item--link"><a th:href="@{/pacientes/novo}">Cadastro Paciente</a></li>
-                            <li class="aw-menu__item  aw-menu__item--link"><a href="pesquisa-produtos.html">Cadastro Conveniada</a></li>
-                            <li class="aw-menu__item  aw-menu__item--link"><a href="tabela-sem-dados.html">Cadastro Usuário</a></li>
+                            <li class="aw-menu__item  aw-menu__item--link is-active">
+                                <a th:href="@{saude/medicos/novo}"><span>Cadastro Médico</span></a>
+                            </li>
+
+                            <li class="aw-menu__item  aw-menu__item--link">
+                                <a th:href="@{saude/pacientes/novo}"><span>Cadastro Paciente</span></a>
+                            </li>
+
+
+                            <li class="aw-menu__item  aw-menu__item--link">
+                                <a th:href="@{saude/conveniadas/novo}"><span>Cadastro Conveniada</span></a>
+                            </li>
+
+                            <li class="aw-menu__item  aw-menu__item--link">
+                                <a th:href="@{saude/usuarios/novo}"><span>Cadastro Usuário</span></a>
+                            </li>
+
                         </ul>
                     </li>
 

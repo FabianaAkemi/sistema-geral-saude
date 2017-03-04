@@ -17,7 +17,7 @@ import javax.validation.Valid;
  * Created by akemi on 27/02/17.
  */
 @Controller
-@RequestMapping("/pacientes")
+@RequestMapping("/saude/pacientes")
 public class PacientesController {
 
     @Autowired
@@ -26,13 +26,13 @@ public class PacientesController {
     @GetMapping("/novo")
     private ModelAndView novo(Paciente medico){
 
-        ModelAndView mv = new ModelAndView("saude/cadastro-paciente");
+        ModelAndView mv = new ModelAndView("cadastros/cadastro-paciente");
         return mv;
 
     }
 
     @PostMapping("/novo")
-    private ModelAndView novo(@Valid Paciente paciente, BindingResult result) {
+    private ModelAndView salvar(@Valid Paciente paciente, BindingResult result) {
 
         if (result.hasErrors()) {
             return novo(paciente);
