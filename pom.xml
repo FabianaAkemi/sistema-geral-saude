@@ -28,7 +28,7 @@
 		<thymeleaf.version>3.0.1.RELEASE</thymeleaf.version>
 
 		<!-- Thymeleaf - Layout Dialect -->
-		<thymeleaf-layout-dialect.version>2.0.1</thymeleaf-layout-dialect.version>
+		<thymeleaf-layout-dialect.version>2.1.2</thymeleaf-layout-dialect.version>
 		
 				<!-- Thymeleaf extras data attribute -->
 		<thymeleaf-extras-data-attribute.version>2.0.1</thymeleaf-extras-data-attribute.version>

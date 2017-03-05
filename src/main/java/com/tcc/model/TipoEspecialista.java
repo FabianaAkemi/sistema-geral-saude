@@ -11,7 +11,7 @@ public enum TipoEspecialista {
     CARDIOLOGISTA,
     NEUROLOGISTA,
     OFTAMOLOGISTA,
-    ORTOPEDISTA,
+    ORTOPEDISTA
 
 
 }
