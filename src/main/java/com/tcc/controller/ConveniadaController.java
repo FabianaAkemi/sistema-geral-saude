@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 
@@ -24,18 +25,20 @@ public class ConveniadaController {
 
     @GetMapping("/novo")
     public ModelAndView novo(Conveniada conveniada){
-        ModelAndView mv = new ModelAndView("/cadastros/cadastro-conveniada");
+        ModelAndView mv = new ModelAndView("cadastros/cadastro-conveniada");
+        mv.addObject(conveniada);
         return mv;
     }
 
     @PostMapping("/novo")
-    public ModelAndView salvar(@Valid Conveniada conveniada, BindingResult result){
+    public ModelAndView salvar(@Valid Conveniada conveniada, BindingResult result, RedirectAttributes attributes){
 
         if (result.hasErrors()) {
             return novo(conveniada);
         }
 
         conveniadaRepository.save(conveniada);
-        return new ModelAndView("redirect:/conveniadas/novo");
+        attributes.addFlashAttribute("mensagem", "Conveniada salvo com sucesso!");
+        return new ModelAndView("redirect:/saude/conveniadas/novo");
     }
 }

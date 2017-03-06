@@ -19,7 +19,7 @@
         </div>
 
         <div class="container-fluid">
-            <form method="POST" class="form-vertical  js-form-loading" th:object="${medico}" >
+            <form method="POST" class="form-vertical  js-form-loading" th:object="${medico}">
 
                 <div class="alert  alert-danger  alert-dismissible" role="alert" th:if="${#fields.hasAnyErrors()}">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -46,7 +46,7 @@
 
                     <div class="form-group  col-sm-6" >
                         <label for="crm">CRM</label>
-                        <input type="text" class="form-control" id="crm" th:field="*{crm}"/>
+                        <input class="form-control" id="crm" type="text" pattern="[0-9]+$" maxlength="5"/>
                     </div>
 
                     <div class="form-group  col-sm-6">
@@ -62,12 +62,12 @@
                 <div class="row">
                     <div class="form-group  col-sm-4">
                         <label for="telefone">Telefone</label>
-                        <input type="text" class="form-control" id="telefone" th:field="*{telefone}"/>
+                        <input type="text" class="form-control js-phone-number" id="telefone" th:field="*{telefone}"/>
                     </div>
 
                     <div class="form-group  col-sm-8">
                         <label for="email">E-mail</label>
-                        <input type="text" class="form-control" id="email" th:field="*{email}"/>
+                        <input type="email" class="form-control" id="email" th:field="*{email}"/>
                     </div>
                 </div>
 

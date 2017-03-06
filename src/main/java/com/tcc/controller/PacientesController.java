@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 
@@ -24,21 +25,23 @@ public class PacientesController {
     private PacientesRepository pacientesRepository;
 
     @GetMapping("/novo")
-    private ModelAndView novo(Paciente medico){
+    private ModelAndView novo(Paciente paciente){
 
         ModelAndView mv = new ModelAndView("cadastros/cadastro-paciente");
+        mv.addObject(paciente);
         return mv;
 
     }
 
     @PostMapping("/novo")
-    private ModelAndView salvar(@Valid Paciente paciente, BindingResult result) {
+    private ModelAndView salvar(@Valid Paciente paciente, BindingResult result, RedirectAttributes attributes) {
 
         if (result.hasErrors()) {
             return novo(paciente);
         }
 
         pacientesRepository.save(paciente);
-        return new ModelAndView("redirect:/pacientes/novo");
+        attributes.addFlashAttribute("mensagem", "Paciente salvo com sucesso!");
+        return new ModelAndView("redirect:/saude/pacientes/novo");
     }
 }
