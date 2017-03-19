@@ -33,7 +33,6 @@ public class Conveniada {
     @NotNull
     private Long numero;
 
-
     private String complemento;
 
     @NotNull

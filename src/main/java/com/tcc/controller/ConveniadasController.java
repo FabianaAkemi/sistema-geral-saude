@@ -1,7 +1,7 @@
 package com.tcc.controller;
 
 import com.tcc.model.Conveniada;
-import com.tcc.repository.ConveniadaRepository;
+import com.tcc.repository.ConveniadasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -17,28 +17,32 @@ import javax.validation.Valid;
  * Created by akemi on 27/02/17.
  */
 @Controller
-@RequestMapping("/saude/conveniadas")
-public class ConveniadaController {
+@RequestMapping("/saude")
+public class ConveniadasController {
+
 
     @Autowired
-    private ConveniadaRepository conveniadaRepository;
+    private ConveniadasRepository conveniadasRepository;
 
-    @GetMapping("/novo")
+    @GetMapping("/conveniada")
     public ModelAndView novo(Conveniada conveniada){
+
         ModelAndView mv = new ModelAndView("cadastros/cadastro-conveniada");
         mv.addObject(conveniada);
         return mv;
+
     }
 
-    @PostMapping("/novo")
-    public ModelAndView salvar(@Valid Conveniada conveniada, BindingResult result, RedirectAttributes attributes){
+    @PostMapping("/conveniada")
+    public ModelAndView salvar(@Valid Conveniada conveniada, BindingResult result, RedirectAttributes attributes) {
 
         if (result.hasErrors()) {
             return novo(conveniada);
         }
 
-        conveniadaRepository.save(conveniada);
+        conveniadasRepository.save(conveniada);
         attributes.addFlashAttribute("mensagem", "Conveniada salvo com sucesso!");
-        return new ModelAndView("redirect:/saude/conveniadas/novo");
+        return new ModelAndView("redirect:/saude/conveniada");
     }
+
 }

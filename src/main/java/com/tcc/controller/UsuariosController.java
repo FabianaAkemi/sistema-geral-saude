@@ -18,20 +18,20 @@ import javax.validation.Valid;
  * Created by akemi on 27/02/17.
  */
 @Controller
-@RequestMapping("/saude/usuarios")
+@RequestMapping("/saude")
 public class UsuariosController {
 
     @Autowired
     private UsuariosRepository usuariosRepository;
 
-    @GetMapping("/novo")
+    @GetMapping("/usuario")
     public ModelAndView novo (Usuario usuario){
 
         ModelAndView mv = new ModelAndView("cadastros/cadastro-usuario");
         return mv;
     }
 
-    @PostMapping("/novo")
+    @PostMapping("/usuario")
     public ModelAndView salvar(@Valid Usuario usuario, BindingResult result){
         if (result.hasErrors()) {
             return novo(usuario);

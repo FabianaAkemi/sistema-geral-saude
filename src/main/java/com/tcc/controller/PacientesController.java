@@ -18,13 +18,13 @@ import javax.validation.Valid;
  * Created by akemi on 27/02/17.
  */
 @Controller
-@RequestMapping("/saude/pacientes")
+@RequestMapping("/saude")
 public class PacientesController {
 
     @Autowired
     private PacientesRepository pacientesRepository;
 
-    @GetMapping("/novo")
+    @GetMapping("/paciente")
     private ModelAndView novo(Paciente paciente){
 
         ModelAndView mv = new ModelAndView("cadastros/cadastro-paciente");
@@ -33,7 +33,7 @@ public class PacientesController {
 
     }
 
-    @PostMapping("/novo")
+    @PostMapping("/paciente")
     private ModelAndView salvar(@Valid Paciente paciente, BindingResult result, RedirectAttributes attributes) {
 
         if (result.hasErrors()) {
@@ -44,4 +44,6 @@ public class PacientesController {
         attributes.addFlashAttribute("mensagem", "Paciente salvo com sucesso!");
         return new ModelAndView("redirect:/saude/pacientes/novo");
     }
+
+
 }
