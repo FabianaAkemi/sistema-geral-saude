@@ -47,7 +47,7 @@ public class PacientesController {
     @GetMapping("/pacientes")
     public ModelAndView pesquisar(PacienteFilter  pacienteFilter){
 
-        ModelAndView mv = new ModelAndView("pesquisas/pesquisa-pacientes");
+        ModelAndView mv = new ModelAndView("pesquisas/pesquisa-paciente");
         mv.addObject("pacientesRepository", pacientesRepository.findByNomeContainingIgnoreCase(
                 Optional.ofNullable(pacienteFilter.getNome()).orElse("%")));
 

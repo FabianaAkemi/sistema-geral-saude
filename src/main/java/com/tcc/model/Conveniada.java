@@ -39,10 +39,7 @@ public class Conveniada {
     private Long cep;
 
     @NotBlank
-    private String estado;
-
-    @NotBlank
-    private String cidade;
+    private String cidadeUf;
 
     public Long getId() {
         return id;
@@ -116,21 +113,14 @@ public class Conveniada {
         this.cep = cep;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getCidadeUf() {
+        return cidadeUf;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setCidadeUf(String cidadeUf) {
+        this.cidadeUf = cidadeUf;
     }
 
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
 
     @Override
     public int hashCode() {
