@@ -42,14 +42,19 @@ public class Paciente {
     private Long cep;
 
     @NotBlank
-    private String estado;
-
-    @NotBlank
-    private String cidade;
+    private String cidadeUf;
 
 
     public String getNome() {
         return nome;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public void setNome(String nome) {
@@ -112,20 +117,12 @@ public class Paciente {
         this.cep = cep;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getCidadeUf() {
+        return cidadeUf;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
+    public void setCidadeUf(String cidadeUf) {
+        this.cidadeUf = cidadeUf;
     }
 
     @Override
