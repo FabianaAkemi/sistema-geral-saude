@@ -54,6 +54,11 @@ public class PacientesController {
         return mv;
     }
 
+    @GetMapping("/pacientes/{id}")
+    public ModelAndView editar(@PathVariable Long id){
+        Paciente paciente  = pacientesRepository.findOne(id);
+        return novo(paciente);
+    }
 
 
 

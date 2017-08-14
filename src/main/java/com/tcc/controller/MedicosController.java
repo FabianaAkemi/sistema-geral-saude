@@ -62,12 +62,11 @@ public class MedicosController {
     }
 
     @DeleteMapping("/medicos/{id}")
-    public ModelAndView deletar(@PathVariable Long id, RedirectAttributes attributes){
+    public String deletar(@PathVariable Long id, RedirectAttributes attributes){
         medicosRepository.delete(id);
         attributes.addFlashAttribute("mensagem", "Médico removido com sucesso!");
-        return new ModelAndView("redirect:/saude/medico");
+        return "redirect:/saude/medicos";
     }
-
 
 
 
