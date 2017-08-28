@@ -1,7 +1,8 @@
 package com.tcc.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 
 /**
  * Created by akemi on 27/02/17.
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-    @GetMapping("/saude")
+    @RequestMapping("/saude")
     public String home(){
         return "layout/home";
     }
