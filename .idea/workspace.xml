@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2551d91-68d6-4d78-a2fb-a3798cc6829b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sistema-geral-saude.iml" afterPath="$PROJECT_DIR$/.idea/sistema-geral-saude.iml" />
-    </list>
+    <list default="true" id="b2551d91-68d6-4d78-a2fb-a3798cc6829b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -343,12 +340,12 @@
       <workItem from="1505486011203" duration="178000" />
       <workItem from="1505512286675" duration="2883000" />
       <workItem from="1505582021733" duration="2724000" />
-      <workItem from="1505675889182" duration="1066000" />
+      <workItem from="1505675889182" duration="1145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9046000" />
+    <option name="totallyTimeSpent" value="9125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="-4" width="1321" height="780" extended-state="6" />
