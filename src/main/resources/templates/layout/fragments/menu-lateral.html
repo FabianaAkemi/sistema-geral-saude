@@ -11,7 +11,7 @@
 
                     <li class="aw-menu__item  is-active">
                         <a href="#">
-                            <i class="fa  fa-fw  fa-file-text"></i><span>Cadastros</span>
+                            <i class="fa  fa-fw  fa-file-text"></i><span>Cadastrar</span>
                             <i class="aw-menu__navigation-icon  fa"></i>
                         </a>
 
@@ -33,6 +33,14 @@
                                 <a th:href="@{saude/usuario}"><span>Cadastro Usuário</span></a>
                             </li>
 
+                            <li class="aw-menu__item  aw-menu__item--link">
+                                <a th:href="@{saude/triagem}"><span>Cadastro Triagem</span></a>
+                            </li>
+
+                            <li class="aw-menu__item  aw-menu__item--link">
+                                <a th:href="@{saude/consulta}"><span>Cadastro Consulta Médica</span></a>
+                            </li>
+
                         </ul>
                     </li>
 
@@ -46,12 +54,11 @@
                             <li class="aw-menu__item  aw-menu__item--link"><a th:href="@{saude/pacientes}">Pesquisar Pacientes</a></li>
                             <li class="aw-menu__item  aw-menu__item--link"><a th:href="@{saude/conveniadas}">Pesquisar Conveniadas</a></li>
                             <li class="aw-menu__item  aw-menu__item--link"><a th:href="@{saude/usuarios}">Pesquisar Usuários</a></li>
+                            <li class="aw-menu__item  aw-menu__item--link"><a th:href="@{saude/triagens}">Pesquisar Triagens</a></li>
+                            <li class="aw-menu__item  aw-menu__item--link"><a th:href="@{saude/triagens}">Pesquisar Consultas Médicas</a></li>
                         </ul>
                     </li>
 
-                    <li class="aw-menu__item">
-                        <a href="#"><i class="fa  fa-fw  glyphicon glyphicon-edit"></i><span>Ficha de Anamnese</span></a>
-                    </li>
 
                 </ul>
             </nav>
