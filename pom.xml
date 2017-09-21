@@ -39,6 +39,7 @@
 		<!-- Spring Security -->
 		<spring-security.version>4.1.1.RELEASE</spring-security.version>
 
+
 	</properties>
 
 	<dependencies>
