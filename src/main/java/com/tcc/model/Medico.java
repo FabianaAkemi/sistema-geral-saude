@@ -26,8 +26,10 @@ public class Medico {
     @Enumerated(EnumType.STRING)
     private TipoEspecialista tipoEspecialista;
 
+    @NotBlank
     private String telefone;
 
+    @NotBlank
     private String email;
 
     public Long getId() {
